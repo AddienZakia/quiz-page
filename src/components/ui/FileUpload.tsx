@@ -73,7 +73,7 @@ function FileUpload({
       <div className="w-full">
         {label && (
           <div className="mb-3">
-            <Typography variant="m" className="text-gray-700">
+            <Typography variant="c" className="text-gray-700">
               {label}
               {props.required && <span className="text-danger-main">*</span>}
             </Typography>
@@ -138,7 +138,7 @@ function FileUpload({
         {(helperText || error) && (
           <div className="mt-2">
             <Typography
-              variant="m"
+              variant="b"
               className={cn(error ? 'text-danger-main' : 'text-neutral-70')}
             >
               {error?.message?.toString() || helperText}
@@ -154,7 +154,7 @@ function FileUpload({
     <div className="w-full">
       {label && (
         <div className="mb-2">
-          <Typography variant="m" className="text-gray-700">
+          <Typography variant="b" className="text-gray-700">
             {label}
             {props.required && <span className="text-danger-main">*</span>}
           </Typography>
@@ -194,10 +194,10 @@ function FileUpload({
               <Upload size={32} className="text-gray-500" />
             </div>
             <div>
-              <Typography variant="m" className="font-medium text-gray-700">
+              <Typography variant="c" className="font-medium text-gray-700">
                 Click to upload or drag and drop
               </Typography>
-              <Typography variant="s" className="mt-1 text-gray-500">
+              <Typography variant="c" className="mt-1 text-gray-500">
                 {accept.includes('image')
                   ? 'PNG, JPG, JPEG or WEBP'
                   : 'Any file'}{' '}
@@ -222,7 +222,7 @@ function FileUpload({
       {(helperText || error) && (
         <div className="mt-2">
           <Typography
-            variant="m"
+            variant="c"
             className={cn(error ? 'text-danger-main' : 'text-neutral-70')}
           >
             {error?.message?.toString() || helperText}

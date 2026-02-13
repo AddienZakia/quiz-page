@@ -40,7 +40,7 @@ function Input({
     <div className="w-full">
       {label && (
         <div className="mb-2">
-          <Typography variant="m" className={cn(isError && 'text-danger-main')}>
+          <Typography variant="b" className={cn(isError && 'text-danger-main')}>
             {label}
             {props.required && <span className="text-danger-main">*</span>}
           </Typography>
@@ -68,7 +68,7 @@ function Input({
       {(helperText || showCharCount || error) && (
         <div className="mt-1 flex items-center justify-between text-sm">
           <Typography
-            variant="m"
+            variant="b"
             className={cn(
               isError || error ? 'text-danger-main' : 'text-neutral-70',
             )}
@@ -77,7 +77,7 @@ function Input({
           </Typography>
           {showCharCount && maxChars && (
             <Typography
-              variant="m"
+              variant="b"
               className={cn(
                 'text-xs',
                 isError ? 'text-danger-main' : 'text-neutral-70',

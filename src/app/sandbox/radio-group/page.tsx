@@ -1,6 +1,6 @@
 'use client';
 
-import { RadioGroup } from '@/components/ui/RadioGroup';
+import { RadioGroup } from '@/components/ui/radio-group';
 import { FormProvider, useForm } from 'react-hook-form';
 import DemoCard from '../demo-card/page';
 
@@ -29,50 +29,21 @@ const RadioGroupSandbox = () => {
           title="Basic Radio Group"
           description="Group radio buttons dengan label"
         >
-          <RadioGroup
-            id="shipping"
-            label="Shipping Method"
-            options={[
-              { value: 'standard', label: 'Standard Shipping (5-7 days)' },
-              { value: 'express', label: 'Express Shipping (2-3 days)' },
-              { value: 'overnight', label: 'Overnight Shipping' },
-            ]}
-            required
-          />
+          <RadioGroup id="shipping" required />
         </DemoCard>
 
         <DemoCard
           title="Payment Methods"
           description="Radio group untuk pemilihan payment method"
         >
-          <RadioGroup
-            id="payment"
-            label="Payment Method"
-            options={[
-              { value: 'credit', label: 'Credit Card' },
-              { value: 'paypal', label: 'PayPal' },
-              { value: 'bank', label: 'Bank Transfer' },
-              { value: 'crypto', label: 'Cryptocurrency' },
-            ]}
-            required
-          />
+          <RadioGroup id="payment" required />
         </DemoCard>
 
         <DemoCard
           title="Product Sizes"
           description="Radio group untuk pemilihan size/product variant"
         >
-          <RadioGroup
-            id="size"
-            label="T-Shirt Size"
-            options={[
-              { value: 'small', label: 'Small' },
-              { value: 'medium', label: 'Medium' },
-              { value: 'large', label: 'Large' },
-              { value: 'xlarge', label: 'Extra Large' },
-            ]}
-            required
-          />
+          <RadioGroup id="size" required />
         </DemoCard>
       </FormProvider>
     </div>

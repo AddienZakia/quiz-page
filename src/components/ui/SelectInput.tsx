@@ -38,7 +38,7 @@ function SelectInput({
       {/* Label */}
       {label && (
         <div className="mb-2">
-          <Typography variant="m" className={cn(error && 'text-danger-main')}>
+          <Typography variant="b" className={cn(error && 'text-danger-main')}>
             {label}
             {required && <span className="text-danger-main">*</span>}
           </Typography>
@@ -91,7 +91,7 @@ function SelectInput({
       {(helperText || error) && (
         <div className="mt-1">
           <Typography
-            variant="m"
+            variant="b"
             className={cn(
               'text-sm',
               error ? 'text-danger-main' : 'text-neutral-70',

@@ -48,9 +48,9 @@ function Button({
     rightIconClassname?: string;
   }) {
   const fontSize = {
-    sm: 's',
-    md: 'm',
-    lg: 'l',
+    sm: 'c',
+    md: 'c',
+    lg: 'b',
   } as const;
 
   const fontColor = {

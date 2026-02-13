@@ -47,7 +47,7 @@ const DialogSandbox = () => {
               </DialogDescription>
             </DialogHeader>
             <div className="py-4">
-              <Typography variant="m">
+              <Typography variant="b">
                 Dialog content goes here. You can put any content inside the
                 dialog.
               </Typography>
@@ -79,7 +79,7 @@ const DialogSandbox = () => {
               </DialogDescription>
             </DialogHeader>
             <div className="py-4">
-              <Typography variant="m" className="text-gray-700">
+              <Typography variant="b" className="text-gray-700">
                 This will permanently delete the item and all associated data.
               </Typography>
             </div>
