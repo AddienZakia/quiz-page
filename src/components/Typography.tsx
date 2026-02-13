@@ -8,7 +8,7 @@ export default function Typography<T extends React.ElementType>({
   children,
   weight = 'regular',
   className,
-  variant = 'l',
+  variant = 't',
   ...props
 }: TypographyProps<T> &
   Omit<React.ComponentProps<T>, keyof TypographyProps<T>>) {
@@ -17,24 +17,65 @@ export default function Typography<T extends React.ElementType>({
     <Component
       id={id}
       className={cn(
-        'font-nunitoSans text-black',
+        'font-nunitoSans',
         // *=============== Font Type ==================
-        {
-          regular: 'font-normal',
-          bold: 'font-bold',
-        }[weight],
+        [
+          weight === 'regular' && 'font-normal',
+          weight === 'medium' && 'font-medium',
+          weight === 'bold' && 'font-bold',
+        ],
         // *=============== Font Variants ==================
-        {
-          d: 'max-md:text-[32px] max-md:leading-11 md:text-[48px] md:leading-16',
-          hl: 'max-md:text-[24px] max-md:leading-9 md:text-[32px] md:leading-11',
-          hm: 'max-md:text-[20px] max-md:leading-8 md:text-[24px] md:leading-9',
-          hs: 'max-md:text-[16px] max-md:leading-7 md:text-[20px] md:leading-8',
-          xl: 'max-md:text-[16px] max-md:leading-6 md:text-[18px] md:leading-7',
-          l: 'max-md:text-[14px] max-md:leading-6 md:text-[16px] md:leading-7',
-          m: 'max-md:text-[12px] max-md:leading-5 md:text-[14px] md:leading-6',
-          s: 'max-md:text-[10px] max-md:leading-4 md:text-[12px] md:leading-5',
-          xs: 'max-md:text-[10px] max-md:leading-4',
-        }[variant],
+        [
+          variant === 'h1' && [
+            'max-md:text-[48px] max-md:leading-14',
+            'md:text-[80px] md:leading-24',
+          ],
+
+          variant === 'h2' && [
+            'max-md:text-[40px] max-md:leading-12',
+            'md:text-[72px] md:leading-22.5',
+          ],
+
+          variant === 'h3' && [
+            'max-md:text-[32px] max-md:leading-10',
+            'md:text-[60px] md:leading-20',
+          ],
+
+          variant === 'h4' && [
+            'max-md:text-[28px] max-md:leading-9',
+            'md:text-[48px] md:leading-15',
+          ],
+
+          variant === 'h5' && [
+            'max-md:text-[24px] max-md:leading-8',
+            'md:text-[32px] md:leading-9',
+          ],
+
+          variant === 'h6' && [
+            'max-md:text-[20px] max-md:leading-7',
+            'md:text-[28px] md:leading-8',
+          ],
+
+          variant === 't' && [
+            'max-md:text-[18px] max-md:leading-7',
+            'md:text-[20px] md:leading-6',
+          ],
+
+          variant === 'p' && [
+            'max-md:text-[16px] max-md:leading-6',
+            'md:text-[18px] md:leading-6',
+          ],
+
+          variant === 'b' && [
+            'max-md:text-[14px] max-md:leading-5.5',
+            'md:text-[16px] md:leading-6',
+          ],
+
+          variant === 'c' && [
+            'max-md:text-[12px] max-md:leading-4',
+            'md:text-[14px] md:leading-4.5',
+          ],
+        ],
         className,
       )}
       {...props}

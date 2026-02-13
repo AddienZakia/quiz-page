@@ -14,12 +14,12 @@
   --color-neutral-90: #404040;
   --color-neutral-100: #1d1f20;
 
-  --color-primary-main: #01959f;
-  --color-primary-surface: #f3fbfc;
-  --color-primary-border: #4db5bc;
-  --color-primary-hover: #01777f;
-  --color-primary-pressed: #01595f;
-  --color-primary-focus: rgba(1, 149, 159, 0.2);
+  --color-primary-main: #004238;
+  --color-primary-surface: #e6f2ef;
+  --color-primary-border: #66a79a;
+  --color-primary-hover: #005f52;
+  --color-primary-pressed: #003028;
+  --color-primary-focus: #99c7be;
 
   --color-secondary-main: #fbc037;
   --color-secondary-surface: #fffcf5;
@@ -42,12 +42,12 @@
   --color-warning-pressed: #985628;
   --color-warning-focus: rgba(202, 115, 54, 0.2);
 
-  --color-success-main: #43936c;
-  --color-success-surface: #f7f7f7;
-  --color-success-border: #b8dbca;
-  --color-success-hover: #367a59;
-  --color-success-pressed: #20573d;
-  --color-success-focus: rgba(115, 25, 18, 0.2);
+  --color-success-main: #29ad01;
+  --color-success-surface: #eaf7e5;
+  --color-success-border: #8fd27a;
+  --color-success-hover: #33c200;
+  --color-success-pressed: #1f7f00;
+  --color-success-focus: #b5e6a3;
 
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
@@ -224,4 +224,8 @@
 
 .card-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
+}
+
+.transition-custom {
+  @apply transition-all duration-200;
 }

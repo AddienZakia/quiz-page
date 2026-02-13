@@ -21,3 +21,9 @@ export interface PaginatedResult<T> {
   data: T[];
   meta: Metadata;
 }
+
+// API Response opentdb
+export interface ApiResponse<T> {
+  response_code: number;
+  results: T;
+}

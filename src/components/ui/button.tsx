@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          'bg-primary-main rounded-md hover:bg-primary-hover disabled:bg-neutral-30 disabled:cursor-not-allowed disabled:border-neutral-60 disabled:border',
+          'bg-primary-main rounded-md hover:bg-primary-hover disabled:bg-neutral-30 disabled:cursor-not-allowed disabled:border-neutral-60 disabled:border text-white',
         alternative:
           'bg-secondary-main rounded-md hover:bg-secondary-hover disabled:bg-neutral-30 disabled:cursor-not-allowed disabled:border-neutral-60 disabled:border',
         outlined:
